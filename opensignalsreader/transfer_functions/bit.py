@@ -776,7 +776,7 @@ def _check_ranges(signal, sensor):
 
 	"""
 	if np.min(signal) < ranges[sensor][0]:
-		warnings.warn("Minimum value of the %s sensor data is smaller than the min range of this sensor (%f < %f)."
+		warnings.warn("Minimum value of the %s sensor data is smaller than the min range of this sensor (%f%s < %f%s)."
 			% (sensor, np.min(signal), units[sensor], ranges[sensor][1], units[sensor]), stacklevel=2)
 	if np.max(signal) > ranges[sensor][1]:
 		warnings.warn("Maximum value of the %s sensor data is greater than the max range of this sensor (%f%s > %f%s)."
