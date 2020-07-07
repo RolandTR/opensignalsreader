@@ -516,7 +516,7 @@ class OpenSignalsReader():
                 key = self._get_key(sens)
                 channel = self._channels_sensors[sens]
 
-                if sens not in self.transfer_functions.keys():
+                if key not in self.transfer_functions.keys():
                     key = 'RAW'
 
                 if raw:
